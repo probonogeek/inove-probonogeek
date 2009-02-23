@@ -54,6 +54,13 @@ class iNoveOptions {
 			// menu
 			$options['menu_type'] = stripslashes($_POST['menu_type']);
 
+      // sidebar
+      if ($_POST['sidebar_tag_cloud']) {
+        $options['sidebar_tag_cloud'] = (bool)true;
+      } else {
+        $options['sidebar_tag_cloud'] = (bool)false;
+      }
+
 			// notice
 			if ($_POST['notice']) {
 				$options['notice'] = (bool)true;
@@ -206,6 +213,20 @@ class iNoveOptions {
 				</tr>
 			</tbody>
 		</table>
+
+    <table class="form-table">
+      <tbody>
+        <tr valign="top">
+          <th scope="row"><?php _e('Sidebar', 'inove'); ?></th>
+          <td>
+            <label style="margin-right:20px;">
+              <input name="sidebar_tag_cloud" type="checkbox" value="checkbox" <?php if($options['sidebar_tag_cloud']) echo "checked='checked'"; ?> />
+               <?php _e('Show Tag Cloud on sidebar.', 'inove'); ?>
+            </label>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
 		<table class="form-table">
 			<tbody>

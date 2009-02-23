@@ -43,8 +43,8 @@
 
 	<!-- showcase -->
 	<?php if( $options['showcase_content'] && (
-		($options['showcase_registered'] && $user_ID) || 
-		($options['showcase_commentator'] && !$user_ID && isset($_COOKIE['comment_author_'.COOKIEHASH])) || 
+		($options['showcase_registered'] && $user_ID) ||
+		($options['showcase_commentator'] && !$user_ID && isset($_COOKIE['comment_author_'.COOKIEHASH])) ||
 		($options['showcase_visitor'] && !$user_ID && !isset($_COOKIE['comment_author_'.COOKIEHASH]))
 	) ) : ?>
 		<div class="widget">
@@ -97,7 +97,7 @@
 	<?php endif; ?>
 
 	<!-- tag cloud -->
-	<?php if (!is_single()) : ?>
+	<?php if (!is_single() && $options['sidebar_tag_cloud']) : ?>
 		<div id="tag_cloud" class="widget">
 			<h3>Tag Cloud</h3>
 			<?php wp_tag_cloud('smallest=8&largest=16'); ?>
@@ -134,7 +134,7 @@
 		<div class="widget widget_archive">
 			<h3>Archives</h3>
 			<ul>
-				<?php wp_get_archives('type=monthly'); ?>
+				<?php wp_get_archives('type=yearly'); ?>
 			</ul>
 		</div>
 
