@@ -22,7 +22,11 @@ class iNoveOptions {
 			$options['author'] = true;
 			$options['categories'] = true;
 			$options['tags'] = true;
-			$options['feed'] = false;
+
+      $options['page_dates'] = true;
+      $options['page_comments'] = true;
+
+      $options['feed'] = false;
 			$options['feed_url'] = '';
 			$options['feed_email'] = false;
 			$options['feed_url_email'] = '';
@@ -82,7 +86,7 @@ class iNoveOptions {
 			$options['showcase_title'] = stripslashes($_POST['showcase_title']);
 			$options['showcase_content'] = stripslashes($_POST['showcase_content']);
 
-			// author & categories & tags
+			// posts - author & categories & tags
 			if ($_POST['author']) {
 				$options['author'] = (bool)true;
 			} else {
@@ -98,6 +102,18 @@ class iNoveOptions {
 			} else {
 				$options['tags'] = (bool)true;
 			}
+
+      // pages - dates & comments
+      if ($_POST['page_dates']) {
+        $options['page_dates'] = (bool)true;
+      } else {
+        $options['page_dates'] = (bool)false;
+      }
+      if ($_POST['page_comments']) {
+        $options['page_comments'] = (bool)true;
+      } else {
+        $options['page_comments'] = (bool)false;
+      }
 
 			// feed
 			if ($_POST['feed']) {
@@ -278,6 +294,24 @@ class iNoveOptions {
 			</tbody>
 		</table>
 
+    <table class="form-table">
+      <tbody>
+        <tr valign="top">
+          <th scope="row"><?php _e('Pages'); ?></th>
+          <td>
+            <label style="margin-right:20px;">
+              <input name="page_dates" type="checkbox" value="checkbox" <?php if($options['page_dates']) echo "checked='checked'"; ?> />
+               <?php _e('Show dates on pages.', 'inove'); ?>
+            </label>
+            <label style="margin-right:20px;">
+              <input name="page_comments" type="checkbox" value="checkbox" <?php if($options['page_comments']) echo "checked='checked'"; ?> />
+               <?php _e('Show comments on pages.', 'inove'); ?>
+            </label>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
 		<table class="form-table">
 			<tbody>
 				<tr valign="top">
@@ -425,7 +459,7 @@ function custom_comments($comment, $args, $depth) {
 					 | <a href="#comment-<?php comment_ID() ?>"><?php printf('#%1$s', ++$commentcount); ?></a>
 			</div>
 			<div class="act">
-				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-<?php comment_ID() ?>', 'comment-<?php comment_ID() ?>', 'comment');"><?php _e('Reply', 'inove'); ?></a> | 
+				<a href="javascript:void(0);" onclick="MGJS_CMT.reply('commentauthor-<?php comment_ID() ?>', 'comment-<?php comment_ID() ?>', 'comment');"><?php _e('Reply', 'inove'); ?></a> |
 				<a href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-<?php comment_ID() ?>', 'comment-<?php comment_ID() ?>', 'commentbody-<?php comment_ID() ?>', 'comment');"><?php _e('Quote', 'inove'); ?></a>
 				<?php
 					if (function_exists("qc_comment_edit_link")) {
