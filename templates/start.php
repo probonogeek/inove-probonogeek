@@ -22,7 +22,7 @@
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 
 	<?php
-		if (is_home()) { 
+		if (is_home()) {
 			$description = $options['description'];
 			$keywords = $options['keywords'];
 		} else if (is_single()) {
@@ -53,7 +53,10 @@
 	<?php elseif (strtoupper(get_locale()) == 'HE_IL' || strtoupper(get_locale()) == 'FA_IR') : ?>
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/rtl.css" type="text/css" media="screen" />
 	<?php endif; ?>
-	<!--[if IE 6]>
+
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/code.css" type="text/css" media="screen" />
+
+  <!--[if IE 6]>
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/ie6.css" type="text/css" media="screen" />
 	<![endif]-->
 	<!-- style END -->
