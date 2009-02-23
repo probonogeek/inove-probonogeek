@@ -10,7 +10,11 @@ class iNoveOptions {
 			$options['keywords'] = '';
 			$options['google_cse'] = false;
 			$options['google_cse_cx'] = '';
-			$options['menu_type'] = 'pages';
+
+      $options['google_analytics'] = false;
+      $options['google_analytics_ua'] = '';
+
+      $options['menu_type'] = 'pages';
 
       $options['sidebar_tag_cloud'] = true;
       $options['sidebar_archive_grouping'] = 'monthly';
@@ -35,7 +39,11 @@ class iNoveOptions {
 			$options['feed_url'] = '';
 			$options['feed_email'] = false;
 			$options['feed_url_email'] = '';
-			update_option('inove_options', $options);
+
+      $options['copyright_author'] = '';
+      $options['copyright_license'] = '';
+
+      update_option('inove_options', $options);
 		}
 		return $options;
 	}
@@ -55,6 +63,14 @@ class iNoveOptions {
 				$options['google_cse'] = (bool)false;
 			}
 			$options['google_cse_cx'] = stripslashes($_POST['google_cse_cx']);
+
+      // google analytics
+      if ($_POST['google_analytics']) {
+        $options['google_analytics'] = (bool)true;
+      } else {
+        $options['google_analytics'] = (bool)false;
+      }
+      $options['google_analytics_ua'] = stripslashes($_POST['google_analytics_ua']);
 
 			// menu
 			$options['menu_type'] = stripslashes($_POST['menu_type']);
@@ -154,6 +170,10 @@ class iNoveOptions {
 			}
 			$options['feed_url_email'] = stripslashes($_POST['feed_url_email']);
 
+      // copyright
+      $options['copyright_author'] = stripslashes($_POST['copyright_author']);
+      $options['copyright_license'] = stripslashes($_POST['copyright_license']);
+
 			update_option('inove_options', $options);
 
 		} else {
@@ -206,6 +226,24 @@ class iNoveOptions {
 				</tr>
 			</tbody>
 		</table>
+
+    <table class="form-table">
+      <tbody>
+        <tr valign="top">
+          <th scope="row"><?php _e('Analytics', 'inove'); ?></th>
+          <td>
+            <label>
+              <input name="google_analytics" type="checkbox" value="checkbox" <?php if($options['google_analytics']) echo "checked='checked'"; ?> />
+               <?php _e('Using google analytics.', 'inove'); ?>
+            </label>
+            <br/>
+            <?php _e('UA:', 'inove'); ?>
+             <input type="text" name="google_analytics_ua" id="google_analytics_ua" class="code" size="40" value="<?php echo($options['google_analytics_ua']); ?>">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
 
 		<table class="form-table">
 			<tbody>
@@ -378,6 +416,23 @@ class iNoveOptions {
 				</tr>
 			</tbody>
 		</table>
+
+    <table class="form-table">
+      <tbody>
+        <tr valign="top">
+          <th scope="row"><?php _e('Copyright Notice', 'inove'); ?></th>
+          <td>
+            <?php _e('Author:', 'inove'); ?>
+            <br/>
+            <input type="text" name="copyright_author" id="copyright_author" class="code" style="width:98%;" value="<?php echo($options['copyright_author']); ?>">
+            <br/>
+            <?php _e('License String:', 'inove'); ?>
+            <br/>
+            <input type="text" name="copyright_license" id="copyright_license" class="code" style="width:98%;" value="<?php echo( $options['copyright_license'] ); ?>">
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
 		<p class="submit">
 			<input class="button-primary" type="submit" name="inove_save" value="<?php _e('Save Changes', 'inove'); ?>" />
