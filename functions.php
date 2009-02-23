@@ -11,7 +11,12 @@ class iNoveOptions {
 			$options['google_cse'] = false;
 			$options['google_cse_cx'] = '';
 			$options['menu_type'] = 'pages';
-			$options['notice'] = false;
+
+      $options['sidebar_tag_cloud'] = true;
+      $options['sidebar_archive_grouping'] = 'monthly';
+      $options['sidebar_nested_categories'] = false;
+
+      $options['notice'] = false;
 			$options['notice_content'] = '';
 			$options['showcase_registered'] = false;
 			$options['showcase_commentator'] = false;
@@ -54,12 +59,18 @@ class iNoveOptions {
 			// menu
 			$options['menu_type'] = stripslashes($_POST['menu_type']);
 
-      // sidebar
+      // sidebar - tag_cloud & archive_grouping & nested_categories
       if ($_POST['sidebar_tag_cloud']) {
         $options['sidebar_tag_cloud'] = (bool)true;
       } else {
         $options['sidebar_tag_cloud'] = (bool)false;
       }
+      if ($_POST['sidebar_nested_categories']) {
+        $options['sidebar_nested_categories'] = (bool)true;
+      } else {
+        $options['sidebar_nested_categories'] = (bool)false;
+      }
+      $options['sidebar_archive_grouping'] = stripslashes($_POST['sidebar_archive_grouping']);
 
 			// notice
 			if ($_POST['notice']) {
@@ -220,8 +231,20 @@ class iNoveOptions {
           <th scope="row"><?php _e('Sidebar', 'inove'); ?></th>
           <td>
             <label style="margin-right:20px;">
+              <input name="sidebar_archive_grouping" type="radio" value="monthly" <?php if($options['sidebar_archive_grouping'] != 'yearly') echo "checked='checked'"; ?> />
+               <?php _e('Show archives grouped by months.', 'inove'); ?>
+            </label>
+            <label>
+              <input name="sidebar_archive_grouping" type="radio" value="yearly" <?php if($options['sidebar_archive_grouping'] == 'yearly') echo "checked='checked'"; ?> />
+               <?php _e('Show archives grouped by years.', 'inove'); ?>
+            </label><br/>
+            <label style="margin-right:20px;">
               <input name="sidebar_tag_cloud" type="checkbox" value="checkbox" <?php if($options['sidebar_tag_cloud']) echo "checked='checked'"; ?> />
                <?php _e('Show Tag Cloud on sidebar.', 'inove'); ?>
+            </label>
+            <label style="margin-right:20px;">
+              <input name="sidebar_nested_categories" type="checkbox" value="checkbox" <?php if($options['sidebar_nested_categories']) echo "checked='checked'"; ?> />
+               <?php _e('Show Nested Categories on sidebar.', 'inove'); ?>
             </label>
           </td>
         </tr>

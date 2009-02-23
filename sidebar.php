@@ -118,8 +118,12 @@
 		<div class="widget widget_categories">
 			<h3>Categories</h3>
 			<ul>
-				<?php wp_list_cats('sort_column=name&optioncount=0&depth=1'); ?>
-			</ul>
+        <?php if ($options['sidebar_nested_categories']) : ?>
+          <?php wp_list_categories( array('title_li' => '') ) ?>
+        <?php else : ?>
+  				<?php wp_list_cats('sort_column=name&optioncount=0&depth=1'); ?>
+        <?php endif ?>
+      </ul>
 		</div>
 
 	<?php endif; ?>
@@ -134,7 +138,7 @@
 		<div class="widget widget_archive">
 			<h3>Archives</h3>
 			<ul>
-				<?php wp_get_archives('type=yearly'); ?>
+				<?php wp_get_archives('type=' . $options['sidebar_archive_grouping']); ?>
 			</ul>
 		</div>
 
