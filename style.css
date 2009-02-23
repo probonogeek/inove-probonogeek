@@ -1,7 +1,7 @@
 /*
-Theme Name: iNove
+Theme Name: iNove - probonogeek
 Theme URI: http://wordpress.org/extend/themes/inove/
-Description: Inspired by <a href="http://maczone.sk/">MacZone.sk</a>, created by <a href="http://www.neoease.com/">mg12</a>. It is very stylish, widget supported and doesn’t require any plugin.
+Description: Inspired by <a href="http://maczone.sk/">MacZone.sk</a>, created by <a href="http://www.neoease.com/">mg12</a>. It is very stylish, widget supported and doesn't require any plugin.
 Version: 1.2.3
 Author: mg12
 Author URI: http://www.neoease.com/
@@ -106,7 +106,7 @@ blockquote, pre {
 .fixed, .clear {
 	clear:both;
 }
-input.textfield, 
+input.textfield,
 textarea {
 	background:#FFF url(img/textfield.gif) top repeat-x;
 	border:1px solid #A6A6A6;
@@ -127,7 +127,7 @@ textarea {
 	padding:8px 12px;
 	margin-bottom:10px;
 }
-.messagebox, 
+.messagebox,
 .errorbox {
 	background:#EDEFF0 url(img/messagebox.gif) no-repeat;
 	padding:0 12px;
@@ -213,7 +213,7 @@ textarea {
 #menus li a:hover {
 	background-position:0 -31px;
 }
-#menus li.current_page_item a, 
+#menus li.current_page_item a,
 #menus li.current-cat a {
 	background-position:0 -62px;
 }
@@ -337,14 +337,14 @@ textarea {
 .post .info span.first {
 	margin-left:0;
 }
-.post .date, 
-.post .tags, 
-.post .author, 
-.post .categories, 
-.post .editpost, 
-.post .readingblinds, 
-.post .comments, 
-.post .addcomment, 
+.post .date,
+.post .tags,
+.post .author,
+.post .categories,
+.post .editpost,
+.post .readingblinds,
+.post .comments,
+.post .addcomment,
 .post .editlinks {
 	background:url(img/icons.gif) no-repeat;
 	padding-left:22px;
@@ -412,11 +412,11 @@ textarea {
 .post .content img {
 	max-width:600px;
 }
-.post .content ul, 
+.post .content ul,
 .post .content ol {
 	padding-bottom:10px;
 }
-.post .content ul li, 
+.post .content ul li,
 .post .content ol li {
 	list-style-position:inside;
 	padding-left:20px;
@@ -448,7 +448,7 @@ textarea {
 	margin:5px 0;
 	padding-left:22px;
 }
-#pagenavi, 
+#pagenavi,
 #postnavi {
 	border-top:1px solid #CCC;
 	margin:10px -5px 0;
@@ -457,7 +457,7 @@ textarea {
 #pagenavi {
 	font-size:11px;
 }
-#pagenavi .newer a, 
+#pagenavi .newer a,
 #postnavi .prev a {
 	background:url(img/icons.gif) 0 -224px no-repeat;
 	padding-left:22px;
@@ -465,7 +465,7 @@ textarea {
 	height:16px;
 	line-height:16px;
 }
-#pagenavi .older a, 
+#pagenavi .older a,
 #postnavi .next a {
 	background:url(img/icons.gif) 100% -240px no-repeat;
 	padding-right:22px;
@@ -491,7 +491,7 @@ textarea {
 	margin-top:5px;
 	/*font-size:95%;*/
 }
-#sidebar .content, 
+#sidebar .content,
 #sidebar li {
 	font-size:12px;
 }
@@ -506,15 +506,15 @@ textarea {
 #centersidebar {
 	padding:12px 15px 0;
 }
-#northsidebar, 
+#northsidebar,
 #southsidebar {
 	font-size:95%;
 }
-#northsidebar .widget h2, 
+#northsidebar .widget h2,
 #southsidebar .widget h2 {
 	margin-bottom:10px;
 }
-#northsidebar .widget .content p, 
+#northsidebar .widget .content p,
 #southsidebar .widget .content p {
 	margin-bottom:10px;
 }
@@ -531,18 +531,18 @@ textarea {
 	font-size:95%;
 	overflow:hidden;
 }
-#westsidebar h3, 
+#westsidebar h3,
 #eastsidebar h3 {
 	margin-bottom:5px;
 }
-#westsidebar .widget, 
+#westsidebar .widget,
 #eastsidebar .widget {
 	margin-bottom:15px;
 }
 #sidebar .widget_feeds {
 	padding:5px 15px 14px;
 }
-#sidebar #feedrss, 
+#sidebar #feedrss,
 #sidebar #feedemail {
 	height:25px;
 	line-height:25px;
@@ -668,7 +668,7 @@ a#gotop {
 	margin:0 -15px;
 	padding:0 15px;
 }
-#commentlist ol, 
+#commentlist ol,
 #commentlist li {
 	list-style:none;
 }
@@ -677,7 +677,7 @@ a#gotop {
 	font-size:10px;
 	padding-top:5px;
 }
-#cmtswitcher a.tab, 
+#cmtswitcher a.tab,
 #cmtswitcher a.curtab {
 	padding:5px 10px;
 	margin-bottom:-1px;
@@ -695,7 +695,7 @@ a#gotop {
 	border:1px solid #CCC;
 	border-bottom-color:#FCFCFC;
 }
-#cmtswitcher .addcomment, 
+#cmtswitcher .addcomment,
 #cmtswitcher .addtrackback {
 	padding-left:22px;
 	height:16px;
@@ -713,11 +713,11 @@ a#gotop {
 #cmtswitcher .addtrackback {
 	background:url(img/icons.gif) 0 -144px no-repeat;
 }
-#thecomments, 
+#thecomments,
 #thetrackbacks {
 	padding-bottom:15px;
 }
-#thecomments .comment, 
+#thecomments .comment,
 #thecomments .messagebox {
 	margin-top:15px;
 }
@@ -747,12 +747,12 @@ a#gotop {
 	padding:10px 15px 0;
 	width:494px;
 }
-.comment .date, 
+.comment .date,
 .trackback .date {
 	float:left;
 	font-size:10px;
 }
-.comment .act, 
+.comment .act,
 .trackback .act {
 	float:right;
 	font-size:10px;
@@ -835,7 +835,7 @@ a#gotop {
 	border:1px solid #EDEFF0;
 	margin:0 -2px;
 }
-#commentnavi a.page-numbers:hover {	
+#commentnavi a.page-numbers:hover {
 	background:#F7F7F7;
 	border:1px solid #CCC;
 	text-decoration:none;
@@ -1002,7 +1002,7 @@ a.imageswitcher_button:hover {
 .one-column #comment {
 	width:902px;
 }
-.one-column .trackback, 
+.one-column .trackback,
 .one-column .trackback .title {
 	width:876px;
 }
@@ -1012,24 +1012,24 @@ a.imageswitcher_button:hover {
 .one-column #header {
 	background-image:url(img/header_footer_1col.jpg);
 }
-.one-column .comment .info, 
+.one-column .comment .info,
 .one-column .comment .content {
 	background-image:url(img/comment_1col.gif);
 }
-.one-column .boxcaption, 
-.one-column .box, 
-.one-column .trackback, 
-.one-column .trackback .title, 
-.one-column #commentnavi, 
-.one-column #related_posts h3, 
+.one-column .boxcaption,
+.one-column .box,
+.one-column .trackback,
+.one-column .trackback .title,
+.one-column #commentnavi,
+.one-column #related_posts h3,
 .one-column #related_posts ul {
 	background-image:url(img/box_1col.gif);
 }
-.one-column .messagebox, 
+.one-column .messagebox,
 .one-column .errorbox {
 	background-image:url(img/messagebox_1col.gif);
 }
-.one-column .post .content .boxcaption, 
+.one-column .post .content .boxcaption,
 .one-column .post .content .box {
 	background-image:url(img/postbox_1col.gif);
 }
