@@ -415,12 +415,6 @@ textarea {
 .post .content img {
 	max-width:600px;
 }
-.post .content ul{
-  list-style-type:disc;
-}
-.post .content ol{
-  list-style-type:decimal;
-}
 .post .content ul,
 .post .content ol {
 	padding-bottom:10px;

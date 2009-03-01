@@ -1,4 +1,20 @@
+/* fixes for syntax highlighter */
+
 .post CODE.comments{
   background-image: none;
   display: inline;
+}
+
+/* fixes for wp-extjs-loader */
+
+.post .content ul{
+  list-style-type:disc;
+}
+.post .content ol{
+  list-style-type:decimal;
+}
+
+.extjs table tr td{
+  border-top: 0;
+  padding: 0;
 }
