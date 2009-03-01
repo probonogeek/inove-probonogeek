@@ -46,7 +46,7 @@
 
 	<!-- style START -->
 	<!-- default style -->
-	<style type="text/css" media="screen">@import url( <?php bloginfo('stylesheet_url'); ?> );</style>
+  <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/screen.css" type="text/css" media="screen" />
 	<!-- for translations -->
 	<?php if (strtoupper(get_locale()) == 'ZH_CN' || strtoupper(get_locale()) == 'ZH_TW') : ?>
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/chinese.css" type="text/css" media="screen" />
@@ -54,7 +54,6 @@
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/rtl.css" type="text/css" media="screen" />
 	<?php endif; ?>
 
-  <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/code.css" type="text/css" media="screen" />
 
   <!--[if IE 6]>
 		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/ie6.css" type="text/css" media="screen" />
