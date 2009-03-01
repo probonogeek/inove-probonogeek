@@ -23,20 +23,20 @@ body {
 	font-family:Verdana,"BitStream vera Sans",Helvetica,Sans-serif;
 	font-size:12px;
 }
-h1, h2, h3, h4, h5, h6 {
+#container h1, h2, h3, h4, h5, h6 {
 	font-weight:bolder;
 	letter-spacing:-0.07em;
 	font-family:Arial;
 }
-h1 {font-size:200%;}
-h2 {font-size:170%;}
-h3 {
+#container h1 {font-size:200%;}
+#container h2 {font-size:170%;}
+#container h3 {
   font-size:150%;
   letter-spacing:-0.05em;
 }
-h4 {font-size:130%;}
-h5 {font-size:110%;}
-h6 {font-size:100%;}
+#container h4 {font-size:130%;}
+#container h5 {font-size:110%;}
+#container h6 {font-size:100%;}
 img {
 	border:0;
 }
