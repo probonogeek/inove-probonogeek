@@ -11,7 +11,7 @@
 		$feed = get_bloginfo('rss2_url');
 	}
 
-  $extjs_feed = 'http://blog.probonogeek.org/category/technology/extjs/feed';
+  $extjs_feed = 'http://feeds2.feedburner.com/probonogeek-extjs';
 ?>
 
 <!-- sidebar START -->
