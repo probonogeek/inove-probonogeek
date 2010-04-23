@@ -26,7 +26,7 @@
 			$description = $options['description'];
 			$keywords = $options['keywords'];
 		} else if (is_single()) {
-			$description =  $post->post_title;
+			$description = the_excerpt();
 			$keywords = "";
 			$tags = wp_get_post_tags($post->ID);
 			foreach ($tags as $tag ) {

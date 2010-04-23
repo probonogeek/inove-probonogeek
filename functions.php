@@ -1,5 +1,9 @@
 <?php
 
+/** customization */
+
+remove_filter('the_excerpt', 'wpautop');
+
 /** inove options */
 class iNoveOptions {
 
